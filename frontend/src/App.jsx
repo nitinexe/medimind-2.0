@@ -15,6 +15,7 @@ import OnboardingPage from "./pages/OnboardingPage";
 import PosturePage from "./pages/PosturePage";
 import DashboardPage from "./pages/DashboardPage";
 import ProfilePage from "./pages/ProfilePage";
+import VitalReadingsPage from "./pages/VitalReadingsPage";
 
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -116,6 +117,8 @@ function App() {
         <Route path="/roadmap/:slug" element={<RoadmapPage />} />
 
         <Route path="*" element={<NotFoundPage />} />
+
+        <Route path="/vitals" element={<ProtectedRoute><VitalReadingsPage /></ProtectedRoute>}/>
       </Routes>
     </BrowserRouter>
   );
